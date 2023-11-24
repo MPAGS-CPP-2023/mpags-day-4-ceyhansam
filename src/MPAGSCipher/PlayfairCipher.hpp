@@ -7,6 +7,7 @@
 #include <cstddef>
 #include <string>
 #include <vector>
+#include <map>
 
 class PlayfairCipher {
     public:
@@ -38,6 +39,12 @@ class PlayfairCipher {
             'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'};
         
         const std::size_t alphabetSize_{alphabet_.size()};
+
+        using kM = std::map<char, std::pair<int, int>>;
+        using cM = std::map<std::pair<int, int>, char>;
+
+        kM keyMatrix;
+        cM coordMatrix;
 
 };
 
